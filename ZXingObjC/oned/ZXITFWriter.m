@@ -27,7 +27,7 @@ static const int ZX_ITF_N = 1; // Pixel width of a narrow line
 /**
  * Patterns of Wide / Narrow lines to indicate each digit
  */
-const int ZX_ITF_WRITER_PATTERNS_LEN = 10;
+#define ZX_ITF_WRITER_PATTERNS_LEN 10
 const int ZX_ITF_WRITER_PATTERNS[ZX_ITF_WRITER_PATTERNS_LEN][5] = {
   {ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_W3, ZX_ITF_W3, ZX_ITF_N},  // 0
   {ZX_ITF_W3, ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_W3}, // 1
@@ -72,7 +72,7 @@ const int ZX_ITF_WRITER_PATTERNS[ZX_ITF_WRITER_PATTERNS_LEN][5] = {
     int one = [[contents substringWithRange:NSMakeRange(i, 1)] intValue];
     int two = [[contents substringWithRange:NSMakeRange(i + 1, 1)] intValue];
     const int encodingLen = 10;
-    int encoding[encodingLen];
+    int encoding[10];
     memset(encoding, 0, encodingLen * sizeof(int));
     for (int j = 0; j < 5; j++) {
       encoding[2 * j] = ZX_ITF_WRITER_PATTERNS[one][j];

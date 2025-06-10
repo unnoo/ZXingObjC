@@ -72,8 +72,8 @@ const int ZX_AZTEC_LATCH_TABLE[][5] = {
 
 // A reverse mapping from [mode][char] to the encoding for that character
 // in that mode.  An entry of 0 indicates no mapping exists.
-const int ZX_AZTEC_CHAR_MAP_HEIGHT = 5;
-const int ZX_AZTEC_CHAR_MAP_WIDTH = 256;
+#define ZX_AZTEC_CHAR_MAP_HEIGHT 5
+#define ZX_AZTEC_CHAR_MAP_WIDTH 256
 static int ZX_AZTEC_CHAR_MAP[ZX_AZTEC_CHAR_MAP_HEIGHT][ZX_AZTEC_CHAR_MAP_WIDTH];
 
 // A map showing the available shift codes.  (The shifts to BINARY are not

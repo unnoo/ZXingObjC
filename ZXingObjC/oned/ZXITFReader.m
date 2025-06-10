@@ -47,7 +47,7 @@ const int ZX_ITF_END_PATTERN_REVERSED[2][3] = {
 /**
  * Patterns of Wide / Narrow lines to indicate each digit
  */
-const int ZX_ITF_PATTERNS_LEN = 20;
+#define ZX_ITF_PATTERNS_LEN 20
 const int ZX_ITF_PATTERNS[ZX_ITF_PATTERNS_LEN][5] = {
   {ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_W2, ZX_ITF_W2, ZX_ITF_N},  // 0
   {ZX_ITF_W2, ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_N,  ZX_ITF_W2}, // 1
