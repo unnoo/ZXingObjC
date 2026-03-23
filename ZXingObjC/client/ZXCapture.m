@@ -494,7 +494,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
                                                  CGImageGetBitsPerComponent(original),
                                                  0,
                                                  colorSpace,
-                                                 kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedFirst);
+                                                 (uint32_t)kCGBitmapAlphaInfoMask & (uint32_t)kCGImageAlphaPremultipliedFirst);
     CGContextSetAllowsAntialiasing(context, FALSE);
     CGContextSetInterpolationQuality(context, kCGInterpolationNone);
     CGColorSpaceRelease(colorSpace);
